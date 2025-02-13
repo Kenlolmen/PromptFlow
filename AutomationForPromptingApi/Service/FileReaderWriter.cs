@@ -1,5 +1,5 @@
 ﻿using AutomationForPromptingApi.Models;
-using ClosedXML.Excel;
+using OfficeOpenXml;
 using System;
 using AutomationForPromptingApi.Exceptions;
 using System.Collections.Generic;
@@ -21,31 +21,54 @@ namespace AutomationForPromptingApi.Service
 
         public List<Dictionary<string, string>> ReadFile(FileModel fileModel)
         {
-
             CheckFileExists(fileModel);
 
             var data = new List<Dictionary<string, string>>();
 
-            using (var workbook = new XLWorkbook(fileModel.Path))
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            try
             {
-                var worksheet = workbook.Worksheet(1);
-                var rows = worksheet.RowsUsed();
-                var headerRow = rows.First(); 
-                var headers = headerRow.Cells().Select(c => c.Value.ToString()).ToList(); 
-
-                foreach (var row in rows.Skip(1)) 
+                using (var package = new ExcelPackage(new FileInfo(fileModel.Path)))
                 {
-                    var rowData = new Dictionary<string, string>();
+                    var worksheet = package.Workbook.Worksheets[0];
 
-                    for (int i = 0; i < headers.Count; i++)
+                    if (worksheet.Dimension == null)
                     {
-                        string header = headers[i];
-                        string cellValue = row.Cell(i + 1).Value.ToString();
-                        rowData[header] = cellValue;
+                        throw new EmptyFileException();
                     }
 
-                    data.Add(rowData);
+                    int rowCount = worksheet.Dimension.Rows;
+                    int colCount = worksheet.Dimension.Columns;
+
+                    var headers = new List<string>();
+                    for (int col = 1; col <= colCount; col++)
+                    {
+                        headers.Add(worksheet.Cells[1, col].Text.Trim());
+                    }
+                    if (headers.TrueForAll(string.IsNullOrWhiteSpace))
+                    {
+                        throw new EmptyFileException();
+                    }
+
+                    for (int row = 2; row <= rowCount; row++) 
+                    {
+                        var rowData = new Dictionary<string, string>();
+                        for (int col = 1; col <= colCount; col++)
+                        {
+                            var header = headers[col - 1];
+                            if (!string.IsNullOrWhiteSpace(header)) 
+                            {
+                                rowData[header] = worksheet.Cells[row, col].Text.Trim();
+                            }
+                        }
+                        data.Add(rowData);
+                    }
                 }
+            }
+            catch 
+            {
+                throw new EmptyFileException();
             }
 
             return data;
@@ -55,29 +78,34 @@ namespace AutomationForPromptingApi.Service
         {
 
 
-            using (var workbook = new XLWorkbook())
-            {
-                if (data.Count == 0)
-                    throw new EmptyFileException();
+            if (data == null || data.Count == 0)
+                throw new EmptyFileException();
 
-                var worksheet = workbook.Worksheets.Add("Sheet1");
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var package = new ExcelPackage())
+            {
+                var worksheet = package.Workbook.Worksheets.Add("Sheet1");
+
                 var headers = data.First().Keys.ToList();
 
-                for (int i = 0; i < headers.Count; i++)
+                for (int col = 0; col < headers.Count; col++)
                 {
-                    worksheet.Cell(1, i + 1).Value = headers[i];
+                    worksheet.Cells[1, col + 1].Value = headers[col];
                 }
 
-                for (int rowIdx = 0; rowIdx < data.Count; rowIdx++)
+                for (int row = 0; row < data.Count; row++)
                 {
-                    var rowData = data[rowIdx];
-                    for (int colIdx = 0; colIdx < headers.Count; colIdx++)
+                    var rowData = data[row];
+                    for (int col = 0; col < headers.Count; col++)
                     {
-                        worksheet.Cell(rowIdx + 2, colIdx + 1).Value = rowData[headers[colIdx]];
+                        worksheet.Cells[row + 2, col + 1].Value = rowData[headers[col]];
                     }
                 }
 
-                workbook.SaveAs(fileModel.Path);
+                
+                var fileInfo = new FileInfo(fileModel.Path);
+                package.SaveAs(fileInfo);
             }
         }
     }

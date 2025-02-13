@@ -12,12 +12,13 @@ namespace AutomationForPromptingTests.Services
 {
     public class FileExistingTest
     {
-
+        private readonly string _emptyFilePath;
         private readonly string _accuratePath;
         private readonly string _innacuratePath;
 
         public FileExistingTest()
         {
+            _emptyFilePath = "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingTests\\Services\\TestFiles\\EmptyFile.xlsx";
             _accuratePath = "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Input\\SourceFile.xlsx";
             _innacuratePath = "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Input\\SourceFile1.xlsx";
         }
