@@ -1,0 +1,6 @@
+@AutomationForPromptingApi_HostAddress = http://localhost:5223
+
+GET {{AutomationForPromptingApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
