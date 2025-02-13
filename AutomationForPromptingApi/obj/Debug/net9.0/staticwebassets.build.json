@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "TfKlST9LcXRC1EqLkwzVKW5/o4oCdtwUZWKoileBNX4=",
+  "Source": "AutomationForPromptingApi",
+  "BasePath": "_content/AutomationForPromptingApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

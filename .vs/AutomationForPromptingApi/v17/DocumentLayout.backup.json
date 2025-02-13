@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2FC66A-01F6-4BFA-B682-3B207A5360D7}|AutomationForPromptingApi\\AutomationForPromptingApi.csproj|c:\\users\\lenovo\\source\\repos\\automationforpromptingapi\\automationforpromptingapi\\service\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C2FC66A-01F6-4BFA-B682-3B207A5360D7}|AutomationForPromptingApi\\AutomationForPromptingApi.csproj|solutionrelative:automationforpromptingapi\\service\\filereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2FC66A-01F6-4BFA-B682-3B207A5360D7}|AutomationForPromptingApi\\AutomationForPromptingApi.csproj|c:\\users\\lenovo\\source\\repos\\automationforpromptingapi\\automationforpromptingapi\\exceptions\\filedoesnotexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C2FC66A-01F6-4BFA-B682-3B207A5360D7}|AutomationForPromptingApi\\AutomationForPromptingApi.csproj|solutionrelative:automationforpromptingapi\\exceptions\\filedoesnotexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6217CD0E-9F99-46A3-A8ED-F513C497B440}|AutomationForPromptingTests\\AutomationForPromptingTests.csproj|c:\\users\\lenovo\\source\\repos\\automationforpromptingapi\\automationforpromptingtests\\services\\fileexistingtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6217CD0E-9F99-46A3-A8ED-F513C497B440}|AutomationForPromptingTests\\AutomationForPromptingTests.csproj|solutionrelative:automationforpromptingtests\\services\\fileexistingtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2FC66A-01F6-4BFA-B682-3B207A5360D7}|AutomationForPromptingApi\\AutomationForPromptingApi.csproj|c:\\users\\lenovo\\source\\repos\\automationforpromptingapi\\automationforpromptingapi\\service\\ifilereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C2FC66A-01F6-4BFA-B682-3B207A5360D7}|AutomationForPromptingApi\\AutomationForPromptingApi.csproj|solutionrelative:automationforpromptingapi\\service\\ifilereaderwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IFileReaderWriter.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Service\\IFileReaderWriter.cs",
+              "RelativeDocumentMoniker": "AutomationForPromptingApi\\Service\\IFileReaderWriter.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Service\\IFileReaderWriter.cs",
+              "RelativeToolTip": "AutomationForPromptingApi\\Service\\IFileReaderWriter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:26:55.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileExistingTest.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingTests\\Services\\FileExistingTest.cs",
+              "RelativeDocumentMoniker": "AutomationForPromptingTests\\Services\\FileExistingTest.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingTests\\Services\\FileExistingTest.cs",
+              "RelativeToolTip": "AutomationForPromptingTests\\Services\\FileExistingTest.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:09:47.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileDoesNotExistsException.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Exceptions\\FileDoesNotExistsException.cs",
+              "RelativeDocumentMoniker": "AutomationForPromptingApi\\Exceptions\\FileDoesNotExistsException.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Exceptions\\FileDoesNotExistsException.cs",
+              "RelativeToolTip": "AutomationForPromptingApi\\Exceptions\\FileDoesNotExistsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T10:54:10.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileReaderWriter.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Service\\FileReaderWriter.cs",
+              "RelativeDocumentMoniker": "AutomationForPromptingApi\\Service\\FileReaderWriter.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingApi\\Service\\FileReaderWriter.cs",
+              "RelativeToolTip": "AutomationForPromptingApi\\Service\\FileReaderWriter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T10:53:12.088Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -51,9 +51,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "EazyExcel": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Shouldly": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

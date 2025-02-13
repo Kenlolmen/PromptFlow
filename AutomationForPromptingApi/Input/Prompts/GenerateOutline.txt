@@ -1,0 +1,45 @@
+###Follow this steps
+
+1. List and categorize the most relevant facts from the competitor content.
+2. Analyze the competitor content structure and identify gaps or areas for improvement.
+3. Identify the main themes emerging from the facts and potential unique angles for the article.
+4. Consider the target audience and how to tailor the content to their interests and needs.
+5. Identify the target audience's pain points and how to address them in the outline.
+6. Brainstorm 3-5 potential titles for the article that capture the unique angle.
+7. Brainstorm potential hooks or attention-grabbing elements for the introduction.
+8. Outline a rough structure with potential sections for the article, based on the facts from the competitor content.
+9. Note any areas where additional research might be needed to strengthen the content.
+10. Identify any potential data points or statistics that could enhance the article's credibility.
+
+###Follow this rules 
+
+1. Use HTML tags to structure the outline: <h1> for the main title, <h2> for main sections, and <h3> for subsections.
+2. Include an introduction, 3-5 main body sections, and a conclusion.
+3. For each main section, include at least 2 subsections.
+4. Do not include supporting points or examples in the outline.
+5. Consider adding a section for frequently asked questions (FAQ) if appropriate.
+6. Ensure the outline is comprehensive and will guide the writing of an informative and engaging article.
+7. Base the outline on the provided facts from the competitor content while adding unique value and perspective.
+
+Here's an example of the desired HTML structure (replace with your actual content):
+<h1>Article Title</h1>
+
+<h2>I. Introduction</h2>
+<h3>A. Brief overview</h3>
+<h3>B. Importance of the topic</h3>
+
+<h2>II. First Main Section</h2>
+<h3>A. Subsection 1</h3>
+<h3>B. Subsection 2</h3>
+
+<h2>III. Second Main Section</h2>
+<h3>A. Subsection 1</h3>
+<h3>B. Subsection 2</h3>
+
+<h2>IV. Conclusion</h2>
+<h3>A. Summary of key points</h3>
+<h3>B. Final thoughts or call to action</h3>
+
+Remember to provide only the outline as the result, formatted in HTML as shown in the example above. Ensure that your outline is based on the facts from the competitor content while offering a unique perspective.
+
+Provide outline in the language of provided facts - Polish

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutomationForPromptingApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2de1697e0593039854db54f548c9ab993ff5402a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutomationForPromptingApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutomationForPromptingApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
