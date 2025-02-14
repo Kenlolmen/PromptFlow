@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace AutomationForPromptingApi.Service
 {
-    public class FileReaderWriter : IFileReaderWriter
+    public class FileReaderWriter : IFileReaderWriter, IFileService
     {
 
         public bool CheckFileExists(FileModel fileModel)
@@ -17,6 +17,45 @@ namespace AutomationForPromptingApi.Service
             }
 
             return true;
+        }
+
+        public List<string> LoadKeywords(FileModel fileModel)
+        {
+            CheckFileExists(fileModel);
+
+            var keywords = new List<string>();
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            try
+            {
+                using (var package = new ExcelPackage(new FileInfo(fileModel.Path)))
+                {
+                    var worksheet = package.Workbook.Worksheets[0];
+
+                    if (worksheet.Dimension == null)
+                    {
+                        throw new EmptyFileException();
+                    }
+
+                    int rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++)  
+                    {
+                        var keyword = worksheet.Cells[row, 1].Text.Trim();  
+                        if (!string.IsNullOrWhiteSpace(keyword))
+                        {
+                            keywords.Add(keyword);  
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw new EmptyFileException();  
+            }
+
+            return keywords;
         }
 
         public List<Dictionary<string, string>> ReadFile(FileModel fileModel)

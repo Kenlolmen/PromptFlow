@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutomationForPromptingTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a2368c128955ea473fd516f9969bf3760a7a49c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d7fbca903bf5d44eef2136d02e3d9d295e6a65b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutomationForPromptingTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutomationForPromptingTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

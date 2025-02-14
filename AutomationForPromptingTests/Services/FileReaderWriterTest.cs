@@ -34,7 +34,7 @@ namespace AutomationForPromptingTests.Services
                 "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingTests\\Services\\TestFiles\\NonEmptyFile.xlsx";
             _emptyFilePathToSave =
                 "C:\\Users\\Lenovo\\source\\repos\\AutomationForPromptingApi\\AutomationForPromptingTests\\Services\\TestFiles\\EmptyFileToSave.xlsx";
-           
+
             _fileReaderWriter = new FileReaderWriter();
 
         }
@@ -111,6 +111,27 @@ namespace AutomationForPromptingTests.Services
             // Assert
             var result = _fileReaderWriter.ReadFile(fileModel);
             result.ShouldBe(data);
+        }
+
+        [Fact]
+        public void GetKeywords_ValidFile_ShouldReturnKeywords()
+        {
+            // Arrange
+            var fileModel = new FileModel(_nonEmptyFilePath);
+            var expectedKeywords = new List<string> { "A", "B", "C", "D" };
+            // Act
+            var result = _fileReaderWriter.GetKeywords(fileModel);
+            // Assert
+            result.ShouldBe(expectedKeywords);
+        }
+
+        [Fact]
+        public void GetKeywords_EmptyFile_ShouldReturnEmptyFileException()
+        {
+            // Arrange
+            var fileModel = new FileModel(_emptyFilePath);
+            // Act & Assert
+            Should.Throw<EmptyFileException>(() => _fileReaderWriter.GetKeywords(fileModel));
         }
     }
 
